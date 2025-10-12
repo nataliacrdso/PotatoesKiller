@@ -119,6 +119,7 @@ class Lvl:
             if not boss_spawned:
                 player = next((p for p in self.entity_list if isinstance(p, Player)), None)
                 if player and player.score >= 3000:
+                if player and player.score >= 5000:
                     boss_spawned = True
                     self.entity_list = [ent for ent in self.entity_list if not isinstance(ent, Enemy)]
 
